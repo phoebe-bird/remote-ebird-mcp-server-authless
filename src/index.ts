@@ -7,9 +7,7 @@ export class MyMCP extends McpAgent {
 
   async init() {
     // Instantiate your client with the values from the worker environment
-    const client = new Phoebe({
-      apiKey: process.env.EBIRD_API_KEY,
-    });
+    const client = new Phoebe();
 
     // Initialize all the generated endpoints with the server
     init({ server: this.server, client });
