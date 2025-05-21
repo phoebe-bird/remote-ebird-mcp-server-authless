@@ -1,5 +1,5 @@
 import { init, server } from "phoebe-ebird-mcp/server";
-import MyStainlessClient from "phoebe-ebird";
+import Phoebe from "phoebe-ebird";
 import { McpAgent } from "agents/mcp";
 
 export class MyMCP extends McpAgent {
@@ -7,7 +7,7 @@ export class MyMCP extends McpAgent {
 
   async init() {
     // Instantiate your client with the values from the worker environment
-    const client = new MyStainlessClient({
+    const client = new Phoebe({
       apiKey: process.env.EBIRD_API_KEY,
     });
 
